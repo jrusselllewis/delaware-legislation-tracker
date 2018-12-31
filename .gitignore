@@ -1,0 +1,5 @@
+*.csv
+*.xml
+delaware_legislation_tracker.egg-info/
+build/
+dist/
