@@ -3,3 +3,4 @@
 delaware_legislation_tracker.egg-info/
 build/
 dist/
+__pycache__/
