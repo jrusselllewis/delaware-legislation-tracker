@@ -15,7 +15,7 @@ def get_latest_legislation():
   payload = {
     'sort':'',
     'page':'1',
-    'pageSize':'200',
+    'pageSize':'1400',
     'selectedGA[0]':'150',
     'coSponsorCheck':'false',
   }
@@ -86,7 +86,7 @@ def write_legislation_csv(legislation_info):
     csv_writer.writerow([
       l['LegislationNumber'],
       dtStr,
-      l['LongTitle'],
+      l['LongTitle'] or l['LegislationDisplayCode'],
       l['StatusName'],
       l['ChamberName'],
       l['Sponsor'],
@@ -128,4 +128,5 @@ def handler(event, context):
     print('*** %s ERROR *** %s \n  on line %s' % (type(ex).__name__, ex, sys.exc_info()[-1].tb_lineno))
     # whine(e)
 
-handler(None, None)
+# uncomment the line below to test this lambda locally.
+# handler(None, None)
