@@ -15,7 +15,7 @@ def get_latest_legislation():
   payload = {
     'sort':'',
     'page':'1',
-    'pageSize':'200',
+    'pageSize':'500',
     'selectedGA[0]':'150',
     'coSponsorCheck':'false',
   }
